@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Depois de clonar o repositório (de preferência dentro dos diretórios do WSL2 através da sua distribuição linux)
 - Acessar diretório e executar `code .` para abrir o VS Code
-- Pressione `Ctrl + Alt + O` e escolha a opção `Reopem in container`
+- Pressione `Ctrl + Alt + O` e escolha a opção `Reopen in container`
 - O VS Code deve reiniciar e instalar todas as dependências do projeto
 - Ao finalizar o processo você estará pronto para desenvolver dentro do DevContainer
 
