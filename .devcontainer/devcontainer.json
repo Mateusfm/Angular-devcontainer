@@ -3,14 +3,18 @@
 	"build": {
 	  "dockerfile": "Dockerfile"
 	},
-	"settings": {
-	  "terminal.integrated.shell.linux": "/bin/bash"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"angular.ng-template"
+			],
+			"settings": {
+			  "terminal.integrated.shell.linux": "/bin/bash"
+			}
+		}
 	},
-	"extensions": [
-	  "dbaeumer.vscode-eslint",
-	  "esbenp.prettier-vscode",
-	  "angular.ng-template"
-	],
 	"postCreateCommand": "npm install",
 	"remoteUser": "node",
 	"forwardPorts": [4200]
