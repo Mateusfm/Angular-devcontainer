@@ -1,22 +1,24 @@
 {
-	"name": "angular 18",
-	"build": {
-	  "dockerfile": "Dockerfile"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"angular.ng-template"
-			],
-			"settings": {
-			  "terminal.integrated.shell.linux": "/bin/bash"
-			}
-		}
-	},
-	"postCreateCommand": "npm install",
-	"remoteUser": "node",
-	"forwardPorts": [4200]
-  }
-  
+  "name": "Angular 18",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/home/node/app,type=bind"
+  ],
+  "workspaceFolder": "/home/node/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "forwardPorts": [4200]
+}

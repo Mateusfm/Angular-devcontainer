@@ -1,20 +1,12 @@
-# Use uma imagem oficial do Node.js como base
 FROM mcr.microsoft.com/devcontainers/typescript-node:18
 
-# Instale ferramentas adicionais (opcional)
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y curl 
 
-# Defina o diretório de trabalho
-WORKDIR /app
-
-# Copie o arquivo package.json e package-lock.json para instalar dependências
-COPY package*.json ./
-
-# Instale as dependências do projeto
 RUN npm install -g @angular/cli@18
 
-# Exponha a porta usada pelo Angular (4200)
-EXPOSE 4200
+USER node
 
-# Comando padrão para o container
-CMD ["npm", "start"]
+# Cria diretório de trabalho, já com usuário node para evitar problemas de permissões
+RUN mkdir /home/node/app
+
+WORKDIR /home/node/app
