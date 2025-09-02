@@ -1,5 +1,5 @@
 {
-	"name": "Node.js & TypeScript",
+	"name": "angular 18",
 	"build": {
 	  "dockerfile": "Dockerfile"
 	},

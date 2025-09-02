@@ -1,5 +1,5 @@
 # Use uma imagem oficial do Node.js como base
-FROM node:18
+FROM mcr.microsoft.com/devcontainers/typescript-node:18
 
 # Instale ferramentas adicionais (opcional)
 RUN apt-get update && apt-get install -y git
@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instale as dependências do projeto
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@18
 
 # Exponha a porta usada pelo Angular (4200)
 EXPOSE 4200
