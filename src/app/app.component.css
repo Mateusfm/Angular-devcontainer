@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 0.75rem;
+}
+
+.layout {
+  height: calc(100vh - 64px);
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+@media (max-width: 599px) {
+  .layout {
+    height: calc(100vh - 56px);
+  }
+}

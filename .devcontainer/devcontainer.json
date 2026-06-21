@@ -15,7 +15,8 @@
         "angular.ng-template",
         "ms-vscode.vscode-typescript-next",
         "bradlc.vscode-tailwindcss",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "openai.chatgpt"
       ]
     }
   },
